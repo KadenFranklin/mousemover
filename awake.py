@@ -1,16 +1,16 @@
 import time
 import pyautogui
 
-counter: int = 0
-while (True):
-    x, y = pyautogui.position()
-    time.sleep(1)
+while True:
     x1, y1 = pyautogui.position()
-    if x1 == x and y1 == y:
-        counter += 1
-    elif (counter > 5):
-        pyautogui.move(100, 0, duration=1, tween=pyautogui.easeInOutQuad)
-        pyautogui.moveTo(x, y, duration=1, tween=pyautogui.easeInOutQuad)
-        counter = 0
-    else:
-        counter = 0
+    pyautogui.move(500, 0, duration=.3, tween=pyautogui.easeInOutQuad)
+    x2, y2 = pyautogui.position()
+    pyautogui.moveTo(x2 + 50, y2, duration=0.01, tween=pyautogui.easeInOutQuad)
+    pyautogui.moveTo(x2 + 75, y2 + 43, duration=0.01, tween=pyautogui.easeInOutQuad)
+    pyautogui.moveTo(x2 + 50, y2 + 86, duration=0.01, tween=pyautogui.easeInOutQuad)
+    pyautogui.moveTo(x2, y2 + 86, duration=0.01, tween=pyautogui.easeInOutQuad)
+    pyautogui.moveTo(x2 - 25, y2 + 43, duration=0.01, tween=pyautogui.easeInOutQuad)
+    pyautogui.moveTo(x2, y2, duration=0.01, tween=pyautogui.easeInOutQuad)
+    pyautogui.moveTo(x1, y1, duration=.1, tween=pyautogui.easeInOutQuad)
+    time.sleep(10)
+    
