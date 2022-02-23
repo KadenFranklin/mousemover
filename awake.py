@@ -13,6 +13,7 @@ def check_if_move():
     
 
 while True:
+    check_if_move()
     x1, y1 = pyautogui.position()
     pyautogui.move(500, 0, duration=.3, tween=pyautogui.easeInOutQuad)
     x2, y2 = pyautogui.position()
