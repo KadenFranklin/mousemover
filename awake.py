@@ -1,6 +1,17 @@
 import time
 import pyautogui
 
+
+def check_if_move():
+    x, y = pyautogui.position()
+    time.sleep(2)
+    xx, yy = pyautogui.position()
+    if x != xx | y != yy:
+        check_if_move()
+    else:
+        return None
+    
+
 while True:
     x1, y1 = pyautogui.position()
     pyautogui.move(500, 0, duration=.3, tween=pyautogui.easeInOutQuad)
