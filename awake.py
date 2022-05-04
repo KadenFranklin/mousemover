@@ -5,9 +5,7 @@ import pyautogui
 def check_if_move(x, y):
 	time.sleep(2)
 	xx, yy = pyautogui.position()
-	if x == xx:
-		return None
-	if y == yy:
+	if x == xx or y == yy:
 		return None
 	else:
 		check_if_move(xx, yy)
